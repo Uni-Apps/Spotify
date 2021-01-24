@@ -1,0 +1,8 @@
+---
+- name: Debian dependencies
+  apt:
+    pkg:
+    - make
+    - gcc
+    - libcurl4-gnutls-dev
+  become: true

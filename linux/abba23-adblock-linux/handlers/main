@@ -1,0 +1,9 @@
+---
+# Broken! can't handle .tar.bz2?
+- name: Extract chromium-embedded
+  unarchive:
+    src: /tmp/spotify-adblock-linux-master/cef.tar.bz2
+    dest: /tmp/spotify-adblock-linux-master/
+    extra_opts:
+    - --wildcards '*/include'
+    - --strip-components=1

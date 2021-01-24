@@ -1,0 +1,12 @@
+---
+- hosts: local
+  gather_facts: yes
+
+  roles:
+  - role: spotify
+    tags: always
+
+  - role: abba23-adblock-linux
+
+  - role: dreamblock
+    tags: dream, never

@@ -1,0 +1,34 @@
+---
+# https://github.com/abba23/spotify-adblock-linux
+
+- import_tasks: debian
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: Download abba23's adblock
+  get_url:
+    url: https://github.com/abba23/spotify-adblock-linux/archive/master.zip
+    dest: /tmp/spotify-adblock-linux.zip
+
+- name: Extract source code
+  unarchive:
+    src: /tmp/spotify-adblock-linux.zip
+    dest: /tmp
+
+- name: Download chromium-embedded
+  get_url:
+    url: http://opensource.spotify.com/cefbuilds/cef_binary_80.0.8%2Bgf96cd1d%2Bchromium-80.0.3987.132_linux64_minimal.tar.bz2
+    dest: /tmp/spotify-adblock-linux-master/cef.tar.bz2
+  # notify: Extract chromium-embedded
+
+- name: Extract chromium-embedded
+  shell: tar -xf cef.tar.bz2 --wildcards '*/include' --strip-components=1
+  args:
+    chdir: /tmp/spotify-adblock-linux-master/
+    creates: include
+    warn: false
+
+- name: Build
+  shell: make
+  args:
+    chdir: /tmp/spotify-adblock-linux-master/
+    creates: spotify-adblock.so

@@ -1,0 +1,14 @@
+---
+- name: Install
+  shell: make install
+  args:
+    chdir: /tmp/spotify-adblock-linux-master/
+  become: yes
+
+- name: Desktop file
+  template:
+    src: spotify-adblock.desktop.j2
+    dest: '/home/{{ansible_user}}/.local/share/applications/spotify-adblock.desktop'
+    owner: '{{ansible_user}}'
+    group: '{{ansible_user}}'
+    mode: '0555'
