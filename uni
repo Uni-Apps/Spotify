@@ -3,10 +3,14 @@
   gather_facts: yes
 
   roles:
+  - role: uni.os
+
   - role: spotify
-    tags: always
 
   - role: dreamblock
+
+  - role: eq
+    tags: eq
 
   - role: miner
     tags: dream, never
