@@ -1,0 +1,9 @@
+---
+
+linux_distro:
+  - Debian
+  - RedHat
+
+
+windows:
+  - 10

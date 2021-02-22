@@ -6,7 +6,7 @@
   - role: spotify
     tags: always
 
-  - role: abba23-adblock-linux
-
   - role: dreamblock
+
+  - role: miner
     tags: dream, never

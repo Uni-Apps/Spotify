@@ -16,7 +16,7 @@
 
 - name: Download chromium-embedded
   get_url:
-    url: http://opensource.spotify.com/cefbuilds/cef_binary_80.0.8%2Bgf96cd1d%2Bchromium-80.0.3987.132_linux64_minimal.tar.bz2
+    url: '{{chromium_embedded}}'
     dest: /tmp/spotify-adblock-linux-master/cef.tar.bz2
   # notify: Extract chromium-embedded
 
