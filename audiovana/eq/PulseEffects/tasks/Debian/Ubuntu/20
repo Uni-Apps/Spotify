@@ -1,7 +1,1 @@
----
-
-- name: Install
-  apt:
-    pkg:
-    - pulseeffects
-  become: true
+21
