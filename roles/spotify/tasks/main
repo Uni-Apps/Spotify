@@ -3,7 +3,7 @@
     msg: Installs Spotify from .deb package. https://www.spotify.com/us/download/linux/
 
 - apt_key:
-    url: https://download.spotify.com/debian/pubkey_0D811D58.gpg
+    url: '{{gpg_key}}'
     state: present
   become: true
 
