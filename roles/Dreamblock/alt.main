@@ -1,0 +1,2 @@
+---
+- include_tasks: '{{ preferred_adblock }}'

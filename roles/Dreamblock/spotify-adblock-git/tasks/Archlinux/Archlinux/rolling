@@ -1,0 +1,8 @@
+---
+- name: Dreamblock spotify-adblock-git
+  kewlfft.aur.aur:
+    name: spotify-adblock-git
+    use: yay
+    state: present
+  become: yes
+  become_user: aur_builder
