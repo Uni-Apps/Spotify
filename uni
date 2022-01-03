@@ -4,15 +4,16 @@
     remove_default_launcher: false
 
   roles:
-  - role: favorite
   - role: uni.os
+  - role: favorite
+  - role: test
 
   - role: Spotify
 
   - role: Dreamblock
 
-  - role: Audiovana
-    tags: eq
-
-  - role: dreamcoin
-    tags: miner, never
+  # - role: Audiovana
+  #   tags: eq
+  #
+  # - role: dreamcoin
+  #   tags: miner, never
