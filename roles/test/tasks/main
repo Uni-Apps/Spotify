@@ -1,8 +1,0 @@
----
-- name: Print
-  ansible.builtin.debug:
-    msg: Hello {{ hello }}
-
-- name: Favorite
-  ansible.builtin.debug:
-    msg: Dreamblock {{ preferred_adblock }}

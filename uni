@@ -7,7 +7,6 @@
   roles:
   - role: uni.os
   - role: favorite
-  - role: test
 
   - role: Spotify
 
