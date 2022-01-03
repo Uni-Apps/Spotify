@@ -1,6 +1,7 @@
 ---
 - hosts: local
-  gather_facts: yes
+  vars:
+    remove_default_launcher: false
 
   roles:
   - role: uni.os
