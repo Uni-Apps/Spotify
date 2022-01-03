@@ -1,11 +1,11 @@
 ---
-
-linux_distro:
-  - Debian
-  - RedHat
-  - Arch
-
-windows:
-  - 10
+# Don't need these lists anymore!
+# linux_distro:
+#   - Debian
+#   - RedHat
+#   - Arch
+#
+# windows:
+#   - 10
 
 hello: world
