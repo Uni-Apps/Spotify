@@ -1,3 +1,5 @@
 ---
 preferred_adblock: abba23/spotify-adblock
+secondary_adblock: spotify-adblock-git
+
 remove_default_launcher: true
