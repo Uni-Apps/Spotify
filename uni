@@ -1,7 +1,6 @@
 ---
 - hosts: local
   vars:
-    preferred_adblock: abba23-adblock-linux
     remove_default_launcher: false
 
   roles:

@@ -15,8 +15,10 @@
   get_url:
     url: '{{chromium_embedded}}'
     dest: /tmp/spotify-adblock-linux-master/cef.tar.bz2
+# Alt:
   # notify: Extract chromium-embedded
 
+# Alt 2:
 - name: Extract chromium-embedded
   shell: tar -xf cef.tar.bz2 --wildcards '*/include' --strip-components=1
   args:
