@@ -1,4 +1,5 @@
 ---
 dependencies:
+  - role: Dreamblock/this
   - role: 'Dreamblock/{{ preferred_adblock }}'
   - role: common/after
