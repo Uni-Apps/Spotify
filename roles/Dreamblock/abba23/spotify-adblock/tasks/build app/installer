@@ -31,3 +31,5 @@
     group: '{{ansible_user}}'
     mode: '0555'
   when: not launcher.stat.exists
+
+- include_tasks: roles/Dreamblock/common/tasks/Remove default Spotify launcher

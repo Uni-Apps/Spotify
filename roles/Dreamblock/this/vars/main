@@ -1,0 +1,10 @@
+---
+# Uni.os compatible list:
+
+linux_distro:
+  - Debian
+  - RedHat
+  - Arch
+
+windows:
+  - 10

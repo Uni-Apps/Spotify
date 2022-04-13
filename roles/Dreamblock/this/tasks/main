@@ -1,8 +1,11 @@
 ---
+- debug:
+    var: ansible_facts['os_family']
+
 - include_role:
-    name: 'Dreamblock/{{ preferred_adblock }}'
+    name: 'Dreamblock/{{ linux_preferred_adblock }}'
+  when: ansible_facts['os_family'] in linux_distro
 
-- import_tasks: after/main
-
-# - include_role:
-#     name: common/after
+- include_role:
+    name: 'Dreamblock/{{ windows_preferred_adblock }}'
+  when: ansible_facts['os_family'] in windows

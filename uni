@@ -1,7 +1,7 @@
 ---
 - hosts: local
   vars:
-    remove_default_launcher: false
+    remove_default_launcher: true
 
   roles:
   - role: Spotify
@@ -9,9 +9,7 @@
   - role: Dreamblock
 
   # - role: uni/DreamCoin
-
-  # - role: Audiovana
-  #   tags: eq
-  #
-  # - role: dreamcoin
   #   tags: miner, never
+
+  - role: Audiovana
+    tags: eq
