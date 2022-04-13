@@ -1,0 +1,4 @@
+---
+- include_role:
+    name: 'Audiovana/enhancement/Equalizer/{{ favorite_linux_equalizer }}'
+  when: ansible_facts['os_family'] in linux_distro

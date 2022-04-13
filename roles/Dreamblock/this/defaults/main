@@ -1,9 +1,9 @@
 ---
-linux_preferred_adblock: abba23/spotify-adblock
+favorite_linux_adblock: abba23/spotify-adblock
 
-linux_secondary_adblock: spotify-adblock-git
+secondary_linux_adblock: spotify-adblock-git
 
-windows_preferred_adblock: spotify-adblock-git/windows
+favorite_windows_adblock: spotify-adblock-git/windows
 
 
 remove_default_launcher: true

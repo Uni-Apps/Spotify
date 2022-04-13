@@ -1,3 +1,4 @@
 ---
 dependencies:
+  - role: this  # use to Resolve OS and other variables
   - role: Dreamblock/this

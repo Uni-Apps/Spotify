@@ -3,9 +3,9 @@
     var: ansible_facts['os_family']
 
 - include_role:
-    name: 'Dreamblock/{{ linux_preferred_adblock }}'
+    name: 'Dreamblock/{{ favorite_linux_adblock }}'
   when: ansible_facts['os_family'] in linux_distro
 
 - include_role:
-    name: 'Dreamblock/{{ windows_preferred_adblock }}'
+    name: 'Dreamblock/{{ favorite_windows_adblock }}'
   when: ansible_facts['os_family'] in windows

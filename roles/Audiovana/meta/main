@@ -1,3 +1,4 @@
 ---
 dependencies:
-  - role: equalizer
+  - role: this  # use to Resolve OS and other variables
+  - role: Audiovana/enhancement/Equalizer

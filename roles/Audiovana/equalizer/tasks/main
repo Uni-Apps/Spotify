@@ -1,4 +1,0 @@
----
-- include_role:
-    name: eq/PulseEffects
-  when: ansible_facts['os_family'] in linux_distro
