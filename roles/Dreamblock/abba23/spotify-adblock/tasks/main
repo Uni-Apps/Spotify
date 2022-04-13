@@ -2,3 +2,7 @@
 
 - debug:
     msg: "Hello abba"
+
+- include_tasks: dependency/main
+
+- import_tasks: build app/main

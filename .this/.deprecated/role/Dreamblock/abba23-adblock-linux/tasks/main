@@ -1,7 +1,7 @@
 ---
 
 # Ubuntu
-- include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
+
 
 # Elementary OS - Fix!
 # - include_tasks: debian

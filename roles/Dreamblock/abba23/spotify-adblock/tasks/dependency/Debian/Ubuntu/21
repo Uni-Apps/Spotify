@@ -2,7 +2,7 @@
 - name: Debian dependencies
   apt:
     pkg:
+    - cargo
+    - git
     - make
-    - gcc
-    - libcurl4-gnutls-dev
   become: true

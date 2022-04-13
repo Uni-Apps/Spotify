@@ -1,15 +1,7 @@
 ---
 # https://github.com/abba23/spotify-adblock-linux
 
-- name: Download abba23's adblock
-  get_url:
-    url: https://github.com/abba23/spotify-adblock-linux/archive/master.zip
-    dest: /tmp/spotify-adblock-linux.zip
 
-- name: Extract source code
-  unarchive:
-    src: /tmp/spotify-adblock-linux.zip
-    dest: /tmp
 
 - name: Download chromium-embedded
   get_url:
@@ -25,9 +17,3 @@
     chdir: /tmp/spotify-adblock-linux-master/
     creates: include
     warn: false
-
-- name: Build
-  shell: make
-  args:
-    chdir: /tmp/spotify-adblock-linux-master/
-    creates: spotify-adblock.so
