@@ -1,0 +1,11 @@
+---
+- debug:
+    msg: "Hello from Common!"
+
+- import_tasks: check is installed
+
+- import_tasks: build app
+  when: not build.stat.exists
+
+- import_tasks: installer
+  when: not launcher.stat.exists

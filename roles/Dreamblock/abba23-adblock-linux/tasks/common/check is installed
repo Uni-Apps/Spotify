@@ -1,0 +1,10 @@
+---
+- name: Get app
+  stat:
+    path: /usr/local/lib/spotify-adblock.so
+  register: build
+
+- name: Get desktop launcher
+  stat:
+    path: '/home/{{ansible_user}}/.local/share/applications/spotify-adblock.desktop'
+  register: launcher

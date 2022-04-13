@@ -1,7 +1,7 @@
 ---
 
 - include_role:
-    name: linux/abba23-adblock-linux
+    name: Dreamblock/abba23-adblock-linux
   when: ansible_facts['os_family'] in linux_distro
 
 - include_role:

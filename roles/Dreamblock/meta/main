@@ -1,3 +1,4 @@
 ---
 dependencies:
   - role: 'Dreamblock/{{ preferred_adblock }}'
+  - role: common/after

@@ -1,0 +1,3 @@
+---
+- import_tasks: remove default launcher
+  when: remove_default_launcher == true

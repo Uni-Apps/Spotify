@@ -1,3 +1,11 @@
 ---
 
+# Ubuntu
 - include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
+
+# Elementary OS - Fix!
+# - import_tasks: debian
+#   when: (ansible_os_family == "Ubuntu") or (ansible_os_family == "elementary OS")
+
+# Common
+- import_tasks: common/main

@@ -1,9 +1,6 @@
 ---
 # https://github.com/abba23/spotify-adblock-linux
 
-- import_tasks: debian
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-
 - name: Download abba23's adblock
   get_url:
     url: https://github.com/abba23/spotify-adblock-linux/archive/master.zip
