@@ -1,3 +1,7 @@
 ---
-- import_tasks: remove default launcher
+- name: Remove default Spotify launcher
+  file:
+    path: /usr/share/applications/spotify.desktop
+    state: absent
+  become: true
   when: remove_default_launcher == true
