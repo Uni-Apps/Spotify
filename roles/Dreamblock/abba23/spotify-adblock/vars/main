@@ -1,4 +1,7 @@
 ---
+# This does not work with the snap Spotify package.
+require: Spotify_deb_package
+
 version: 1.0.1
 
 source_dir: /tmp/spotify-adblock-{{ version }}

@@ -1,8 +1,5 @@
 ---
-- name: Get desktop launcher
-  stat:
-    path: '/home/{{ansible_user}}/.local/share/applications/spotify-adblock.desktop'
-  register: launcher
+
 
 - name: Install
   shell: make install
@@ -11,13 +8,26 @@
     creates: /usr/local/lib/spotify-adblock.so
   become: yes
 
+- name: Get desktop launcher
+  stat:
+    path: '/home/{{ansible_user}}/.local/share/applications/spotify-adblock.desktop'
+  register: launcher
 
-
-# - name: Desktop file
+# - name: Launcher global - all users
 #   template:
-#     src: spotify-adblock.desktop.j2
-#     dest: '/home/{{ansible_user}}/.local/share/applications/spotify-adblock.desktop'
+#     src: deb.spotify-adblock.desktop.j2
+#     dest: '/usr/share/applications/abba23-spotify-adblock.desktop'
 #     owner: '{{ansible_user}}'
 #     group: '{{ansible_user}}'
 #     mode: '0555'
-# when: not launcher.stat.exists
+#   when: not launcher.stat.exists
+
+
+- name: Launcher for this user
+  template:
+    src: deb.spotify-adblock.desktop.j2
+    dest: '/home/{{ansible_user}}/.local/share/applications/abba23-spotify-adblock.desktop'
+    owner: '{{ansible_user}}'
+    group: '{{ansible_user}}'
+    mode: '0555'
+  when: not launcher.stat.exists
