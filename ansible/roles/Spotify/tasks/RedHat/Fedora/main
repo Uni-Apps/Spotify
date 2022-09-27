@@ -23,6 +23,7 @@
 
 
 # - name: build Spotify
+#   become: yes
 #   ansible.builtin.command: lpf update
 #   args:
 #     creates: /path/to/database
