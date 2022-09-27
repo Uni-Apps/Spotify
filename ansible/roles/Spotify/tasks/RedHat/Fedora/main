@@ -1,7 +1,11 @@
 ---
+- name: Is Spotify installed?
+  stat:
+    path: /usr/bin/spotify
+  register: spotify
 
-# - include_role:
-#     name: depends/rpmfusion
+- include_role:
+    name: depends/rpmfusion
 
 - name: install lpf-spotify-client
   become: yes
@@ -9,6 +13,7 @@
     name:
       - lpf-spotify-client
     state: latest
+  when: not spotify.stat.exists
 
 - name: Add user to group
   become: yes
@@ -21,9 +26,21 @@
   - Reboot if remote
   - Tell user to reboot manually
 
-
 # - name: build Spotify
 #   become: yes
 #   ansible.builtin.command: lpf update
 #   args:
 #     creates: /path/to/database
+
+- name: Is Spotify installed? after
+  stat:
+    path: /usr/bin/spotify
+  register: spotify
+
+- name: Remove lpf-spotify-client as it's no longer needed
+  become: yes
+  ansible.builtin.dnf:
+    name:
+      - lpf-spotify-client
+    state: absent
+  when: spotify.stat.exists
