@@ -1,0 +1,28 @@
+---
+
+# - include_role:
+#     name: depends/rpmfusion
+
+- name: install lpf-spotify-client
+  become: yes
+  ansible.builtin.dnf:
+    name:
+      - lpf-spotify-client
+    state: latest
+
+- name: Add user to group
+  become: yes
+  ansible.builtin.user:
+    name: "{{ ansible_user }}"
+    groups: pkg-build
+    append: yes
+  notify:
+  - End the play if requires manual Reboot
+  - Reboot if remote
+  - Tell user to reboot manually
+
+
+# - name: build Spotify
+#   ansible.builtin.command: lpf update
+#   args:
+#     creates: /path/to/database

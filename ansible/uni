@@ -4,12 +4,13 @@
     remove_default_launcher: true
 
   roles:
-  - role: Spotify
+  - default
+  - Spotify
 
-  - role: Dreamblock
+  # - Dreamblock
+
+  # - role: Audiovana
+  #   tags: eq
 
   # - role: uni/DreamCoin
   #   tags: miner, never
-
-  - role: Audiovana
-    tags: eq

@@ -1,0 +1,14 @@
+---
+
+# Your user is added to pkg-build group but haven't yet take effect. It only takes effect when the user logs in again please logout and login or do exec su - me you can read more details on  https://unix.stackexchange.com/questions/6387/i-added-a-user-to-a-group-but-group-permissions-on-files-still-have-no-effect
+
+- name: End the play if requires manual Reboot
+  ansible.builtin.meta: end_host
+
+- name: Reboot if remote
+  ansible.builtin.reboot:
+  when: connection != "local"
+
+- name: Tell user to reboot manually
+  debug:
+    msg: "You must reboot then this run again to finish Installing Spotify! because it makes group add take effect"

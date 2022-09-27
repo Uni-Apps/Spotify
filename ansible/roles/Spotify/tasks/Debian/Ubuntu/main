@@ -1,0 +1,4 @@
+---
+- include_tasks:
+    name: package-deb
+  when: source == "package"
