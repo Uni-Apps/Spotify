@@ -1,11 +1,12 @@
 ---
-- hosts: local
+- hosts: test, #local
   vars:
     remove_default_launcher: true
 
   roles:
   - default
   - Spotify
+  # - login
 
   # - Dreamblock
 
