@@ -1,6 +1,7 @@
 ---
+# Installs Spotify from .deb package. https://www.spotify.com/us/download/linux/
 - debug:
-    msg: Installs Spotify from .deb package. https://www.spotify.com/us/download/linux/
+    msg: Patriot Act
 
 # https://www.spotify.com/us/download/linux/
 - name: Add Spotify's official GPG key to apt
