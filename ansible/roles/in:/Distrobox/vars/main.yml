@@ -1,0 +1,1 @@
+command: "distrobox create --name music --image ubuntu:latest --home /var/home/me/.var/distrobox/home/music"
