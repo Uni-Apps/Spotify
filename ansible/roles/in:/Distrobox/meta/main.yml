@@ -1,0 +1,2 @@
+dependencies:
+- Browser/Chrome # Requires a browser to login to Spotify! Easiest to install is Google Chrome.
