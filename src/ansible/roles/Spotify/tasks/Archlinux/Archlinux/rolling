@@ -1,8 +1,0 @@
----
-- name: Spotify
-  kewlfft.aur.aur:
-    name: spotify
-    use: yay
-    state: present
-  become: yes
-  become_user: aur_builder

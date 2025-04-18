@@ -1,0 +1,8 @@
+- hosts: localhost #, node
+  vars:
+    devel: true
+  roles:
+    - UniInc.Spotify
+    # Dev
+#    - ansible-role-Spotify
+
