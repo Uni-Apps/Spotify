@@ -4,19 +4,16 @@ distrobox create --name $app --home ~/.uni/hyper/distrobox/HOME/$app --image qua
 
 distrobox enter $app
 
-# installYay(){
-#   echo https://github.com/Unicorn-OS/ArchLinux.Knowledge/blob/main/Package%20Manager/AUR/Yay/readme.md
-# }
-
-# echo """
-# [multilib]
-# Include = /etc/pacman.d/mirrorlist
-# """ | sudo tee -a /etc/pacman.conf
+installYay(){
+  echo https://github.com/Unicorn-OS/ArchLinux.Knowledge/blob/main/Package%20Manager/AUR/Yay/readme.md
+  echo https://github.com/Jguer/yay#binary
+}
 
 sudo pacman -Sy
 
 sudo pacman -S spotify-launcher pamac
 
-pamac build spotblock-rs
+yay -S spotblock-rs
 
+distrobox-export spotblock-rs
 distrobox-export --app $app
