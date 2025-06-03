@@ -18,5 +18,5 @@ yay -S spotblock-rs
 
 this=`echo "$app" | awk '{print tolower($0)}'`
 
-distrobox-export --bin spotblock-rs
+distrobox-export --app spotblock-rs
 distrobox-export --app $bin
