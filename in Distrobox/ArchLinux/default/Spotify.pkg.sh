@@ -15,5 +15,7 @@ sudo pacman -S spotify-launcher pamac
 
 yay -S spotblock-rs
 
+this=`echo "$app" | awk '{print tolower($0)}'`
+
 distrobox-export spotblock-rs
-distrobox-export --app $app
+distrobox-export --app $this
