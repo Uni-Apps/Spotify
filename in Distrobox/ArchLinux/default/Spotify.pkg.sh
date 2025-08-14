@@ -12,7 +12,7 @@ installYay(){
 
 sudo pacman -Sy
 
-sudo pacman -S $exe pamac
+sudo pacman -S $bin pamac
 
 yay -S spotblock-rs
 
